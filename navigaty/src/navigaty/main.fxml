@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" prefHeight="620.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="navigaty.mainController">
+   <center>
+      <AnchorPane id="AnchorPane" fx:id="apCenter" prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <ImageView fx:id="imgFondo" blendMode="DARKEN" fitHeight="560.0" fitWidth="900.0" pickOnBounds="true" smooth="false" x="900.0" y="560.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <viewport>
+                  <Rectangle2D height="768.0" minX="900.0" minY="560.0" width="1366.0" />
+               </viewport>
+            </ImageView>
+            <Rectangle fx:id="rectdark" arcHeight="5.0" arcWidth="5.0" fill="#0000006d" height="560.0" smooth="false" stroke="#aeaeae" strokeType="INSIDE" strokeWidth="0.0" width="900.0" x="1366.0" y="768.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane fx:id="paneDark" prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: #000000a1;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane layoutX="125.0" layoutY="138.0" onMouseClicked="#btnGoogle" prefHeight="158.0" prefWidth="302.0" style="-fx-background-color: white;" styleClass="panel" stylesheets="@../estilo.css" AnchorPane.leftAnchor="125.0">
+               <children>
+                  <ImageView fitHeight="74.0" fitWidth="217.0" layoutX="43.0" layoutY="42.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../img/google.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="125.0" layoutY="331.0" onMouseClicked="#btnYoutube" prefHeight="158.0" prefWidth="302.0" style="-fx-background-color: #DA2828;" styleClass="panel" stylesheets="@../estilo.css" AnchorPane.leftAnchor="125.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/youtube.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="497.0" layoutY="138.0" onMouseClicked="#btnFacebook" prefHeight="158.0" prefWidth="302.0" style="-fx-background-color: #3B5998;" styleClass="panel" stylesheets="@../estilo.css" AnchorPane.rightAnchor="101.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="51.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/facebook.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="497.0" layoutY="331.0" onMouseClicked="#btnAmazon" prefHeight="158.0" prefWidth="302.0" style="-fx-background-color: #F7F7F7;" styleClass="panel" stylesheets="@../estilo.css" AnchorPane.rightAnchor="101.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="51.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/amazon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <JFXToggleButton fx:id="togleDark" layoutY="517.0" onAction="#togleDark" size="7.0" text="." toggleColor="WHITE" toggleLineColor="#bcbcbc" unToggleColor="BLACK" unToggleLineColor="#5b5b5b" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+            <ImageView fx:id="imgMoon" fitHeight="24.0" fitWidth="24.0" layoutX="41.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="41.0">
+               <image>
+                  <Image url="@../iconos/moon.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="767.0" layoutY="537.0" onAction="#linkFondo" text="Cambiar Fondo" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="43.0" />
+            <Pane layoutX="125.0" layoutY="72.0" prefHeight="33.0" prefWidth="671.0" style="-fx-background-color: #0202023d; -fx-background-radius: 5;" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="104.0">
+               <children>
+                  <TextField fx:id="txtSearchName" layoutX="5.0" layoutY="4.0" prefHeight="25.0" prefWidth="587.0" promptText="Search . . ." />
+                  <Pane layoutX="599.0" onMouseClicked="#btnSearchname" prefHeight="33.0" prefWidth="71.0" style="-fx-background-color: #0202029e; -fx-background-radius: 0 4 4 0;">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="24.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/search.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox prefHeight="60.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="20.0" prefWidth="900.0">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" styleClass="btnMenu" stylesheets="@../estilo.css">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/menu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnPestana" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#btnPestana" prefHeight="25.0" prefWidth="159.0" styleClass="btnTab" stylesheets="@../estilo.css" text="Nueva pestaña" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #0202023d;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnHome" prefHeight="39.0" prefWidth="38.0" styleClass="btnHome" stylesheets="@../estilo.css">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#btnRefresh" prefHeight="58.0" prefWidth="16.0" styleClass="btnHome" stylesheets="@../estilo.css">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="38.0" styleClass="btnHome" stylesheets="@../estilo.css">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/left_24px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="btnHome" stylesheets="@../estilo.css">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/right_24px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="txtSearch" prefHeight="25.0" prefWidth="612.0" style="-fx-background-radius: 0;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btntxtSearch" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0202029e; -fx-background-radius: 0 3 3 0;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../iconos/about_me_male_50px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,27 @@
+.root{
+    -fx-background-color: transparent;
+}
+.panel{
+    -fx-background-radius: 3;
+}
+.panel:hover{
+    -fx-opacity: 0.78;
+    -fx-cursor: hand;
+}
+.btnMenu{
+    -fx-background-color: #d3d3d39e;
+    -fx-background-radius: 3 3 0 0;
+}
+.btnTab{
+    -fx-background-color:  #0202029e;
+    -fx-background-radius: 3 3 0 0;
+}
+.btnHome{
+    -fx-background-color:  #0202023d;
+    -fx-background-radius: 0;
+    -fx-opacity: 0.55;
+}
+.btnHome:hover{
+    -fx-cursor: hand;
+    -fx-opacity:1;
+}
